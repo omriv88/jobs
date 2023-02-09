@@ -1,6 +1,6 @@
-<?xml version="1.1" encoding="UTF-8"?><project>
-  <actions/>
-  <description/>
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@5.0.0">
@@ -24,9 +24,10 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.36.1">
-      <spec/>
-    </com.cloudbees.jenkins.GitHubPushTrigger>
+    <hudson.triggers.SCMTrigger>
+      <spec>* * * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders/>
@@ -42,3 +43,4 @@
     </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers/>
+</project>
